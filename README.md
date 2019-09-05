@@ -1,1 +1,2 @@
-# comp1000
+# COMP1000StarterPack
+Starter Pack for COMP1000
