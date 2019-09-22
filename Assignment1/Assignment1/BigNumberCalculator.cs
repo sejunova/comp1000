@@ -89,7 +89,7 @@ namespace Assignment1
             {
                 return null;
             }
-         }
+        }
 
         public static string ToHex(string num)
         {
@@ -244,7 +244,7 @@ namespace Assignment1
 
             for (int i = 2; i < num.Length; i++)
             {
-                if (!((65 <= num[i] && num[i] <= 70) ||  (48 <= num[i] && num[i] <= 57)))
+                if (!((65 <= num[i] && num[i] <= 70) || (48 <= num[i] && num[i] <= 57)))
                 {
                     return false;
                 }
@@ -620,7 +620,7 @@ namespace Assignment1
                 for (int i = 0; i < decimalNumber.Length; i++)
                 {
                     char c = decimalNumber[i];
-                    digitNumber = ((c  - '0') / 2 + add);
+                    digitNumber = ((c - '0') / 2 + add);
                     decimalNumberDividedByTwo[i] = convertOneDigitIntlToChar(digitNumber);
                     if ((c - '0') % 2 == 1)
                     {
