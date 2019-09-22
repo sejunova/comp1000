@@ -168,10 +168,6 @@ namespace Assignment1
             string binaryAddedWithout0B = addTwoBinaryNumberWithout0B(num1BinaryWithout0B, num2BinaryWithout0B, out bOverflow);
             if (mMode == EMode.Binary)
             {
-                if (bOverflow)
-                {
-                    return null;
-                }
                 return "0b" + binaryAddedWithout0B;
             }
             else
