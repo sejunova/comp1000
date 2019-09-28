@@ -5,7 +5,7 @@ namespace Lab4
 {
     public sealed class MultiSet
     {
-        Dictionary<string, uint> mElements;
+        private Dictionary<string, uint> mElements;
 
         public MultiSet()
         {
@@ -157,11 +157,11 @@ namespace Lab4
             powerSet.Add(new MultiSet());
             List<string> setList = ToList();
 
-            MakePoserSetRecursive(setList, new List<string>(), 0, powerSet, new HashSet<string>());
+            makePoserSetRecursive(setList, new List<string>(), 0, powerSet, new HashSet<string>());
             return powerSet;
         }
 
-        private static void MakePoserSetRecursive(List<string> setList, List<string> currentList, int i, List<MultiSet> powerSet, HashSet<string> occurances)
+        private static void makePoserSetRecursive(List<string> setList, List<string> currentList, int i, List<MultiSet> powerSet, HashSet<string> occurances)
         {
             for (int j = i; j < setList.Count; j++)
             {
@@ -182,7 +182,7 @@ namespace Lab4
 
                 if (j != setList.Count - 1)
                 {
-                    MakePoserSetRecursive(setList, currentListCopy, j + 1, powerSet, occurances);
+                    makePoserSetRecursive(setList, currentListCopy, j + 1, powerSet, occurances);
                 }
             }
         }
