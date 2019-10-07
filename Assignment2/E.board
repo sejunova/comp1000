@@ -4,8 +4,8 @@
     "Minor": 0
   },
   "PanCoords": {
-    "X": 144.4961,
-    "Y": -14.4882813
+    "X": 303.703125,
+    "Y": 366.6914
   },
   "InputCoords": {
     "X": -85.0,
@@ -29,55 +29,55 @@
     }
   ],
   "OutputCoords": {
-    "X": 1657.66406,
-    "Y": 226.273438
+    "X": 1474.0,
+    "Y": 232.0
   },
   "Outputs": [
     {
       "Order": 0,
       "ID": "c1895b90-b89a-4acd-a65a-5f6118171862",
-      "InputSource": "431b1720-7ba2-4ccb-bdad-d4cfefea9c3f"
+      "InputSource": "4cc419a5-3a47-42db-9449-7eb2e1a1eccc"
     }
   ],
   "Gates": [
     {
-      "ID": "a14fee30-bd9d-40c9-98f5-a30d39fa8045",
+      "ID": "4cc419a5-3a47-42db-9449-7eb2e1a1eccc",
       "Inputs": [
-        "af68d780-5c43-43ce-af2d-5bfee5c8616d",
-        "ab2b9570-87d8-49cc-a717-b9c844160a83"
+        "d55a3d6d-bbc0-4dc5-adaf-e35c2912e1eb",
+        "eefd85e5-bf15-4321-8bf5-ab0741db16bd"
       ],
-      "X": 677.597656,
-      "Y": 524.7617,
-      "Type": "AND"
-    },
-    {
-      "ID": "ab2b9570-87d8-49cc-a717-b9c844160a83",
-      "Inputs": [
-        "46bb1920-c611-41ca-99c0-10f907870276",
-        null
-      ],
-      "X": 445.039063,
-      "Y": 490.976563,
-      "Type": "NOT"
-    },
-    {
-      "ID": "431b1720-7ba2-4ccb-bdad-d4cfefea9c3f",
-      "Inputs": [
-        "46bb1920-c611-41ca-99c0-10f907870276",
-        "717e74d0-1660-41cc-9cea-0cc7d7b3a5f8"
-      ],
-      "X": 1116.36719,
-      "Y": 321.925781,
+      "X": 752.417969,
+      "Y": -180.542969,
       "Type": "OR"
     },
     {
-      "ID": "717e74d0-1660-41cc-9cea-0cc7d7b3a5f8",
+      "ID": "d55a3d6d-bbc0-4dc5-adaf-e35c2912e1eb",
+      "Inputs": [
+        "af68d780-5c43-43ce-af2d-5bfee5c8616d",
+        "b84fd4a0-a5d9-45c2-85e8-58388228abcc"
+      ],
+      "X": 464.1172,
+      "Y": -223.617188,
+      "Type": "AND"
+    },
+    {
+      "ID": "5e470b34-81da-4a0e-81a7-b4d860024c6f",
       "Inputs": [
         "b84fd4a0-a5d9-45c2-85e8-58388228abcc",
-        "a14fee30-bd9d-40c9-98f5-a30d39fa8045"
+        null
       ],
-      "X": 874.1836,
-      "Y": 376.84375,
+      "X": 348.511719,
+      "Y": -11.59375,
+      "Type": "NOT"
+    },
+    {
+      "ID": "eefd85e5-bf15-4321-8bf5-ab0741db16bd",
+      "Inputs": [
+        "46bb1920-c611-41ca-99c0-10f907870276",
+        "5e470b34-81da-4a0e-81a7-b4d860024c6f"
+      ],
+      "X": 598.8242,
+      "Y": -110.808594,
       "Type": "AND"
     }
   ],
