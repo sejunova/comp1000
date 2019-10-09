@@ -9,7 +9,7 @@ namespace Lab6
         private EType mType;
         private double mWeight;
         private double mVolume;
-        private bool mBIsToxicWaste;
+        private bool mbIsToxicWaste;
 
         public EType Type
         {
@@ -25,7 +25,7 @@ namespace Lab6
         }
         public bool IsToxicWaste
         {
-            get { return mBIsToxicWaste; }
+            get { return mbIsToxicWaste; }
         }
 
         public Item(EType type, double weight, double volume, bool isToxicWaste)
@@ -33,7 +33,7 @@ namespace Lab6
             mType = type;
             mWeight = weight;
             mVolume = volume;
-            mBIsToxicWaste = isToxicWaste;
+            mbIsToxicWaste = isToxicWaste;
         }
     }
 }
