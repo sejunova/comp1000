@@ -4,25 +4,29 @@
     {
         public uint ID { get; }
         public string Name { get; }
-        public EFeatures Features { get; set; }
+        private EFeatures mFeatures;
 
         public Frame(uint id, string name)
         {
             ID = id;
             Name = name;
-            Features = EFeatures.Default;
+            mFeatures = EFeatures.Default;
+        }
+        public EFeatures Features
+        {
+            get { return mFeatures; }
         }
         public void ToggleFeatures(EFeatures features)
         {
-            Features ^= features;
+            mFeatures ^= features;
         }
         public void TurnOnFeatures(EFeatures features)
         {
-            Features |= features;
+            mFeatures |= features;
         }
         public void TurnOffFeatures(EFeatures features)
         {
-            Features &= ~features;
+            mFeatures &= ~features;
         }
     }
 }
