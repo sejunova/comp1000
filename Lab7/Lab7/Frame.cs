@@ -2,9 +2,9 @@
 {
     class Frame
     {
-        private uint mId;
-        private string mName;
-        private EFeatures mFeatures;
+        public uint mId;
+        public string mName;
+        public EFeatures mFeatures;
 
         public Frame(uint id, string name)
         {
