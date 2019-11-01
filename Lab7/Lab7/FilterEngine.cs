@@ -2,7 +2,7 @@
 
 namespace Lab7
 {
-    static class FilterEngine
+    class FilterEngine
     {
         public static List<Frame> FilterFrames(List<Frame> frames, EFeatures features)
         {

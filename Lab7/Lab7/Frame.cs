@@ -1,6 +1,6 @@
 ﻿namespace Lab7
 {
-    public class Frame
+    class Frame
     {
         private uint mId;
         private string mName;
