@@ -2,39 +2,27 @@
 {
     class Frame
     {
-        public uint mId;
-        public string mName;
-        public EFeatures mFeatures;
+        public uint ID { get; }
+        public string Name { get; }
+        public EFeatures Features { get; set; }
 
         public Frame(uint id, string name)
         {
-            mId = id;
-            mName = name;
-            mFeatures = EFeatures.Default;
-        }
-        public uint ID
-        {
-            get { return mId; }
-        }
-        public string Name
-        {
-            get { return mName; }
-        }
-        public EFeatures Features
-        {
-            get { return mFeatures; }
+            ID = id;
+            Name = name;
+            Features = EFeatures.Default;
         }
         public void ToggleFeatures(EFeatures features)
         {
-            mFeatures ^= features;
+            Features ^= features;
         }
         public void TurnOnFeatures(EFeatures features)
         {
-            mFeatures |= features;
+            Features |= features;
         }
         public void TurnOffFeatures(EFeatures features)
         {
-            mFeatures &= ~features;
+            Features &= ~features;
         }
     }
 }
