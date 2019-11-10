@@ -16,7 +16,7 @@ namespace Assignment3
                 Tuple<int, int> key = new Tuple<int, int>(allSteps[i], allSteps[i + 1]);
                 exitPoints[key] = 0;
             }
-            MakeStepsRecursive(allSteps, noise, exitPoints);
+            makeStepsRecursive(allSteps, noise, exitPoints);
             return allSteps;
         }
 
@@ -25,7 +25,7 @@ namespace Assignment3
             return (int)(step1 + (step2 - step1) * (decimal)point);
         }
 
-        private static void MakeStepsRecursive(List<int> allSteps, INoise noise, Dictionary<Tuple<int, int>, int> exitPoints)
+        private static void makeStepsRecursive(List<int> allSteps, INoise noise, Dictionary<Tuple<int, int>, int> exitPoints)
         {
             List<int> steps = new List<int>(allSteps);
 
@@ -54,7 +54,7 @@ namespace Assignment3
                     exitPoints[new Tuple<int, int>(p2, p3)] = level + 1;
                     exitPoints[new Tuple<int, int>(p3, p4)] = level + 1;
                     exitPoints[new Tuple<int, int>(p4, steps[i + 1])] = level + 1;
-                    MakeStepsRecursive(allSteps, noise, exitPoints);
+                    makeStepsRecursive(allSteps, noise, exitPoints);
                     break;
                 }
                 insertIndex++;
