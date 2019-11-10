@@ -20,6 +20,11 @@ namespace Assignment3
             return allSteps;
         }
 
+        private static int lerp(decimal step1, decimal step2, double point)
+        {
+            return (int)(step1 + (step2 - step1) * (decimal)point);
+        }
+
         private static void MakeStepsRecursive(List<int> allSteps, INoise noise, Dictionary<Tuple<int, int>, int> exitPoints)
         {
             List<int> steps = new List<int>(allSteps);
@@ -32,10 +37,12 @@ namespace Assignment3
                     Tuple<int, int> key = new Tuple<int, int>(steps[i], steps[i + 1]);
                     int level = exitPoints[key];
 
-                    int p1 = (int)((1 - 0.2) * steps[i] + 0.2 * steps[i + 1]) + noise.GetNext(level);
-                    int p2 = (int)((1 - 0.4) * steps[i] + 0.4 * steps[i + 1]) + noise.GetNext(level);
-                    int p3 = (int)((1 - 0.6) * steps[i] + 0.6 * steps[i + 1]) + noise.GetNext(level);
-                    int p4 = (int)((1 - 0.8) * steps[i] + 0.8 * steps[i + 1]) + noise.GetNext(level);
+                    decimal step1 = (decimal)steps[i];
+                    decimal step2 = (decimal)steps[i + 1];
+                    int p1 = lerp(step1, step2, 0.2) + noise.GetNext(level);
+                    int p2 = lerp(step1, step2, 0.4) + noise.GetNext(level);
+                    int p3 = lerp(step1, step2, 0.6) + noise.GetNext(level);
+                    int p4 = lerp(step1, step2, 0.8) + noise.GetNext(level);
 
                     allSteps.Insert(insertIndex++, p1);
                     allSteps.Insert(insertIndex++, p2);
