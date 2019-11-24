@@ -73,7 +73,7 @@ namespace Assignment4
 
         public static Bitmap ConvolveImage(Bitmap bitmap, double[,] filter)
         {
-            Bitmap newBitmap = new Bitmap(bitmap);
+            Bitmap newBitmap = new Bitmap(bitmap.Width, bitmap.Height);
             int filterLength = filter.GetLength(0);
             int m = filterLength / 2;
             for (int x = 0; x < newBitmap.Width; x++)
