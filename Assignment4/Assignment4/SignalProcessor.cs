@@ -100,9 +100,49 @@ namespace Assignment4
                             b += (double)pixelColor.B * filter[i, j];
                         }
                     }
-                    int rInt = r < 0 ? 0 : (int)r;
-                    int gInt = g < 0 ? 0 : (int)g;
-                    int bInt = b < 0 ? 0 : (int)b;
+
+                    int rInt;
+                    int gInt;
+                    int bInt;
+
+                    if (r < 0)
+                    {
+                        rInt = 0;
+                    }
+                    else if (r > 255)
+                    {
+                        rInt = 255;
+                    }
+                    else
+                    {
+                        rInt = (int)r + 1;
+                    }
+
+                    if (g < 0)
+                    {
+                        gInt = 0;
+                    }
+                    else if (g > 255)
+                    {
+                        gInt = 255;
+                    }
+                    else
+                    {
+                        gInt = (int)g + 1;
+                    }
+
+                    if (b < 0)
+                    {
+                        bInt = 0;
+                    }
+                    else if (b > 255)
+                    {
+                        bInt = 255;
+                    }
+                    else
+                    {
+                        bInt = (int)b + 1;
+                    }
                     newBitmap.SetPixel(x, y, Color.FromArgb(rInt, gInt, bInt));
                 }
             }
