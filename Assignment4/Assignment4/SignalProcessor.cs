@@ -88,10 +88,6 @@ namespace Assignment4
                     {
                         for (int j = 0; j < filterLength; j++)
                         {
-                            if (x == 0 && y == 17)
-                            {
-                                int qq = 1;
-                            }
                             int cX = x + m - i;
                             int cY = y + m - j;
                             if (0 <= cX && cX < newBitmap.Width && 0 <= cY && cY < newBitmap.Height)
@@ -116,14 +112,9 @@ namespace Assignment4
                     {
                         rInt = 255;
                     }
-                    else if ((int)r == r)
-                    {
-                        rInt = (int)r;
-                    }
                     else
                     {
-                        rInt = (int)r + 1;
-
+                        rInt = (int)r;
                     }
 
                     if (g < 0)
@@ -134,13 +125,9 @@ namespace Assignment4
                     {
                         gInt = 255;
                     }
-                    else if ((int)g == g)
-                    {
-                        gInt = (int)g;
-                    }
                     else
                     {
-                        gInt = (int)g + 1;
+                        gInt = (int)g;
                     }
 
                     if (b < 0)
@@ -151,13 +138,9 @@ namespace Assignment4
                     {
                         bInt = 255;
                     }
-                    else if ((int)b == b)
-                    {
-                        bInt = (int)b;
-                    }
                     else
                     {
-                        bInt = (int)b + 1;
+                        bInt = (int)b;
                     }
                     newBitmap.SetPixel(x, y, Color.FromArgb(rInt, gInt, bInt));
                 }
