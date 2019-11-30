@@ -88,16 +88,19 @@ namespace Assignment4
                     {
                         for (int j = 0; j < filterLength; j++)
                         {
+                            if (x == 0 && y == 17)
+                            {
+                                int qq = 1;
+                            }
                             int cX = x + m - i;
                             int cY = y + m - j;
-                            if ((cX < 0 || cX >= newBitmap.Width) || (cY < 0 || cY >= newBitmap.Height))
+                            if (0 <= cX && cX < newBitmap.Width && 0 <= cY && cY < newBitmap.Height)
                             {
-                                continue;
+                                Color pixelColor = bitmap.GetPixel(cX, cY);
+                                r += (double)pixelColor.R * filter[j, i];
+                                g += (double)pixelColor.G * filter[j, i];
+                                b += (double)pixelColor.B * filter[j, i];
                             }
-                            Color pixelColor = bitmap.GetPixel(cX, cY);
-                            r += (double)pixelColor.R * filter[i, j];
-                            g += (double)pixelColor.G * filter[i, j];
-                            b += (double)pixelColor.B * filter[i, j];
                         }
                     }
 
@@ -113,9 +116,14 @@ namespace Assignment4
                     {
                         rInt = 255;
                     }
+                    else if ((int)r == r)
+                    {
+                        rInt = (int)r;
+                    }
                     else
                     {
                         rInt = (int)r + 1;
+
                     }
 
                     if (g < 0)
@@ -125,6 +133,10 @@ namespace Assignment4
                     else if (g > 255)
                     {
                         gInt = 255;
+                    }
+                    else if ((int)g == g)
+                    {
+                        gInt = (int)g;
                     }
                     else
                     {
@@ -138,6 +150,10 @@ namespace Assignment4
                     else if (b > 255)
                     {
                         bInt = 255;
+                    }
+                    else if ((int)b == b)
+                    {
+                        bInt = (int)b;
                     }
                     else
                     {
