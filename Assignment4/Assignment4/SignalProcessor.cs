@@ -100,7 +100,10 @@ namespace Assignment4
                             b += (double)pixelColor.B * filter[i, j];
                         }
                     }
-                    newBitmap.SetPixel(x, y, Color.FromArgb((int)r, (int)g, (int)b));
+                    int rInt = r < 0 ? 0 : (int)r;
+                    int gInt = g < 0 ? 0 : (int)g;
+                    int bInt = b < 0 ? 0 : (int)b;
+                    newBitmap.SetPixel(x, y, Color.FromArgb(rInt, gInt, bInt));
                 }
             }
             return newBitmap;
